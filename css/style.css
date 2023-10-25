@@ -36,8 +36,8 @@
 }
 
 body {
-  max-width: 1280px;
-  margin: 0 auto;
+  max-width: 3000px;
+  margin: 0 0 0 0;
   background-color: var(--color-creamson);
 }
 
@@ -106,11 +106,18 @@ a {
 }
 
 /* START: about us media queries */
+@media screen and (max-width: 1060px){
+  .header__menu{
+    background-color: #b1454a;
+  }
+  .header__menu a{
+    color: #fff0de;
+  }
+}
 @media screen and (max-width: 1024px) {
   .about-us {
     flex-direction: column;
   }
-
   .about-us__image {
     flex-direction: row;
   }

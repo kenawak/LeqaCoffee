@@ -2,6 +2,8 @@
   display: flex;
   min-height: 720px;
   overflow: hidden;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 
 .about-us__image{
