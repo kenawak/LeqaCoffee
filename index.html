@@ -15,7 +15,23 @@
         <h4 data-aos="fade-down">Leqa Coffee | Buna Leeqaa</h4>
         <div class="header__logo-overlay"></div>
       </div>
-      <ul data-aos="fade-down" class="header__menu">
+      <ul data-aos="fade-down" class="header__menu sidebar" 
+      style="
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(253, 246, 246, 0.124);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      ">
+        <li onclick= hidesidebar()><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARNJREFUSEvt1DtKBEEURuFvUkFMlFEwEBF0DYMPUFNxG2IquBOZxEhwA+IKVIxUTH1grKGuQC6U0EhPVTnQmEyFTdV/7j11u3o6Xr2O800ARcP/rugYZ3gfUeoqNnA6qpVcB4c4wQs2WyAruMY89nHRBskB4mAERNBrqvSnk2Xcoo9HbOHrr4DY3waZqg2PgJpLXsBV6uQJMwl8jx185kapBhDnF5OupRSW1dIE1gLCdTgP97EesF2qvlZRhN8kRc9JUXy7w24JUuqgWfkbBphujGexkxygLfwjKYrRDWVzJV05wAGGCC0x57//5rXUySz2cDnOf3CE88xTEZD1cZ+K4ktZs6F0yTUZ2T0TQFFh54q+ARi0NBkujYiHAAAAAElFTkSuQmCC"/></li>
         <li>
           <a href="#menu">Menu</a>
         </li>
@@ -28,15 +44,23 @@
         <li>
           <a href="#about-us">About Us</a>
         </li>
-        <li>
-          <img src="assets/search.svg" alt="search"/>
-        </li>
       </ul>
-      <ul data-aos="fade-down" class="header__menu-mobile">
-        <li>
-          <img src="assets/menu.svg" alt="menu"/>
+      <ul data-aos="fade-down" class="header__menu">
+        <li class="hide">
+          <a href="#menu">Menu</a>
         </li>
-
+        <li class="hide">
+          <a href="#food">Food</a>
+        </li>
+        <li class="hide">
+          <a href="#services">Services</a>
+        </li>
+        <li class="hide">
+          <a href="#about-us">About Us</a>
+        </li>
+        <li onclick=showSidebar() class="open">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/>
+        </li>        
       </ul>
     </nav>
   </header>
@@ -318,5 +342,16 @@
     </ul>
   </footer>
   <script src="js/script.js" type="module"></script>
+
+  <script>
+    function showSidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex';
+    }
+    function hidesidebar(){
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none';
+    }
+  </script>
 </body>
 </html>

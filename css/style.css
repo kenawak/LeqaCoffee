@@ -104,7 +104,9 @@ a {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
+.open{
+  display: none;
+}
 /* START: about us media queries */
 @media screen and (max-width: 1060px){
   .header__menu{
@@ -177,10 +179,11 @@ a {
   .header__nav {
     background: var(--primary-color);
   }
-  
-
-  .header__menu {
+  .hide{
     display: none;
+  }
+  .open{
+    display:flex; 
   }
 
   .header__menu-mobile {
